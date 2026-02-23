@@ -1,9 +1,9 @@
 export default function handler(req,res){
   const {id,pass}=req.query;
   const LICENSES=[
-    {id:"demo10",pass:"demo10",exp:"2027-03-01"},
-      {id:"demo1",pass:"demo1",exp:"2027-03-01"},
-    {id:"client1",pass:"client123",exp:"2027-12-31"}
+    {id:"demo10",pass:"demo10",exp:"2029-03-01"},
+      {id:"demo1",pass:"demo1",exp:"2029-03-01"},
+    {id:"client1",pass:"client123",exp:"2029-12-31"}
   ];
   const u=LICENSES.find(x=>x.id===id&&x.pass===pass);
   if(!u) return res.json({ok:false,msg:"Invalid"});
